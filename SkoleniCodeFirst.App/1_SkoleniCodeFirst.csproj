@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9D534CB2-6BD7-4F5E-88BA-7D4942DBE728}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SkoleniCodeFirst</RootNamespace>
+    <AssemblyName>SkoleniCodeFirst</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatabaseContext\Connections\Article.cs" />
+    <Compile Include="DatabaseContext\Connections\Author.cs" />
+    <Compile Include="DatabaseContext\Connections\OtherContext.cs" />
+    <Compile Include="DatabaseContext\Example.cs" />
+    <Compile Include="DatabaseContext\Initializers\Article.cs" />
+    <Compile Include="DatabaseContext\Initializers\MyContext.cs" />
+    <Compile Include="DatabaseContext\Initializers\MyContextInitializers.cs" />
+    <Compile Include="DatabaseContext\ZakladniMetody\MyContext.cs" />
+    <Compile Include="DatabaseContext\ZakladniMetody\Article.cs" />
+    <Compile Include="DatabaseContext\Connections\MyContext.cs" />
+    <Compile Include="Dedicnost\Example.cs" />
+    <Compile Include="Dedicnost\TPC\Article.cs" />
+    <Compile Include="Dedicnost\TPC\MyContext.cs" />
+    <Compile Include="Dedicnost\TPC\OfflineArticle.cs" />
+    <Compile Include="Dedicnost\TPC\OnlineArticle.cs" />
+    <Compile Include="Dedicnost\TPH\Article.cs" />
+    <Compile Include="Dedicnost\TPH\MyContext.cs" />
+    <Compile Include="Dedicnost\TPH\OfflineArticle.cs" />
+    <Compile Include="Dedicnost\TPH\OnlineArticle.cs" />
+    <Compile Include="Dedicnost\TPT\Article.cs" />
+    <Compile Include="Dedicnost\TPT\MyContext.cs" />
+    <Compile Include="Dedicnost\TPT\OfflineArticle.cs" />
+    <Compile Include="Dedicnost\TPT\OnlineArticle.cs" />
+    <Compile Include="VztahyMeziEntitami\Enumy\Article.cs" />
+    <Compile Include="VztahyMeziEntitami\Enumy\BestPractice\Article.cs" />
+    <Compile Include="VztahyMeziEntitami\Enumy\BestPractice\ArticleState.cs" />
+    <Compile Include="VztahyMeziEntitami\Enumy\BestPractice\MyContext.cs" />
+    <Compile Include="VztahyMeziEntitami\Enumy\BestPractice\State.cs" />
+    <Compile Include="VztahyMeziEntitami\Enumy\MyContext.cs" />
+    <Compile Include="VztahyMeziEntitami\Enumy\State.cs" />
+    <Compile Include="VztahyMeziEntitami\KomplexniTypy\Contact.cs" />
+    <Compile Include="VztahyMeziEntitami\KomplexniTypy\FluentApi\Author.cs" />
+    <Compile Include="VztahyMeziEntitami\KomplexniTypy\FluentApi\Contact.cs" />
+    <Compile Include="VztahyMeziEntitami\KomplexniTypy\FluentApi\MyContext.cs" />
+    <Compile Include="VztahyMeziEntitami\KomplexniTypy\FluentApi\Redactor.cs" />
+    <Compile Include="VztahyMeziEntitami\KomplexniTypy\Redactor.cs" />
+    <Compile Include="VztahyMeziEntitami\KomplexniTypy\Author.cs" />
+    <Compile Include="VztahyMeziEntitami\KomplexniTypy\MyContext.cs" />
+    <Compile Include="VztahyMeziEntitami\ManyToMany\Article.cs" />
+    <Compile Include="VztahyMeziEntitami\ManyToMany\Author.cs" />
+    <Compile Include="VztahyMeziEntitami\ManyToMany\FluentApi\Article.cs" />
+    <Compile Include="VztahyMeziEntitami\ManyToMany\FluentApi\Author.cs" />
+    <Compile Include="VztahyMeziEntitami\ManyToMany\FluentApi\MyContext.cs" />
+    <Compile Include="VztahyMeziEntitami\ManyToMany\MyContext.cs" />
+    <Compile Include="VztahyMeziEntitami\Example.cs" />
+    <Compile Include="VztahyMeziEntitami\ManyToOneToMany\Article.cs" />
+    <Compile Include="VztahyMeziEntitami\ManyToOneToMany\Author.cs" />
+    <Compile Include="VztahyMeziEntitami\ManyToOneToMany\AuthorArticles.cs" />
+    <Compile Include="VztahyMeziEntitami\ManyToOneToMany\MyContext.cs" />
+    <Compile Include="VztahyMeziEntitami\OneToMany\Article.cs" />
+    <Compile Include="VztahyMeziEntitami\OneToMany\Author.cs" />
+    <Compile Include="VztahyMeziEntitami\OneToMany\Category.cs" />
+    <Compile Include="VztahyMeziEntitami\OneToMany\FluentApi\Article.cs" />
+    <Compile Include="VztahyMeziEntitami\OneToMany\FluentApi\Author.cs" />
+    <Compile Include="VztahyMeziEntitami\OneToMany\FluentApi\Category.cs" />
+    <Compile Include="VztahyMeziEntitami\OneToMany\FluentApi\MyContext.cs" />
+    <Compile Include="VztahyMeziEntitami\OneToMany\MyContext.cs" />
+    <Compile Include="VztahyMeziEntitami\OneToOneOrZero\Article.cs" />
+    <Compile Include="VztahyMeziEntitami\OneToOneOrZero\ArticleMetadata.cs" />
+    <Compile Include="VztahyMeziEntitami\OneToOneOrZero\FluentApi\Article.cs" />
+    <Compile Include="VztahyMeziEntitami\OneToOneOrZero\FluentApi\ArticleMetadata.cs" />
+    <Compile Include="VztahyMeziEntitami\OneToOneOrZero\FluentApi\MyContext.cs" />
+    <Compile Include="VztahyMeziEntitami\OneToOneOrZero\MyContext.cs" />
+    <Compile Include="VztahyMeziEntitami\SelfRelace\Category.cs" />
+    <Compile Include="VztahyMeziEntitami\SelfRelace\FluentApi\Category.cs" />
+    <Compile Include="VztahyMeziEntitami\SelfRelace\FluentApi\MyContext.cs" />
+    <Compile Include="VztahyMeziEntitami\SelfRelace\MyContext.cs" />
+    <Compile Include="ZakladniSchemaFluentApi\Article.cs" />
+    <Compile Include="ZakladniSchemaFluentApi\Author.cs" />
+    <Compile Include="ZakladniSchemaFluentApi\AuthorDbConfiguration.cs" />
+    <Compile Include="ZakladniSchemaFluentApi\Event.cs" />
+    <Compile Include="ZakladniSchemaFluentApi\Example.cs" />
+    <Compile Include="ZakladniSchemaFluentApi\MyContext.cs" />
+    <Compile Include="ZakladniSchemaAnotace\Article.cs" />
+    <Compile Include="ZakladniSchemaAnotace\Author.cs" />
+    <Compile Include="ZakladniSchemaAnotace\Example.cs" />
+    <Compile Include="ZakladniSchemaAnotace\MyContext.cs" />
+    <Compile Include="ZakladniSchemaAnotace\OwnAnnotation\EmailAttribute.cs" />
+    <Compile Include="ZakladniSchema\Article.cs" />
+    <Compile Include="ZakladniSchema\Author.cs" />
+    <Compile Include="ZakladniSchemaAnotace\Event.cs" />
+    <Compile Include="ZakladniSchema\Example.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZakladniSchema\MyContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="VztahyMeziEntitami\OneToOneOrZero\readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="VztahyMeziEntitami\Enumy\BestPractice\schema.jpg" />
+    <Content Include="VztahyMeziEntitami\Enumy\schema.jpg" />
+    <Content Include="VztahyMeziEntitami\KomplexniTypy\schema.jpg" />
+    <Content Include="VztahyMeziEntitami\ManyToMany\schema.jpg" />
+    <Content Include="VztahyMeziEntitami\ManyToOneToMany\schema.jpg" />
+    <Content Include="VztahyMeziEntitami\OneToMany\schema.jpg" />
+    <Content Include="VztahyMeziEntitami\OneToOneOrZero\schema.jpg" />
+    <Content Include="VztahyMeziEntitami\SelfRelace\schema.jpg" />
+    <Content Include="ZakladniSchema\datove_typy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DatabaseContext\GenerateFromDb\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
