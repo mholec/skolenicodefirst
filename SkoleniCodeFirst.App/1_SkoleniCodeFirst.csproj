@@ -149,6 +149,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Dedicnost\TPC\priklad.png" />
+    <Content Include="Dedicnost\TPH\priklad.png" />
+    <Content Include="Dedicnost\TPT\priklad.png" />
     <Content Include="VztahyMeziEntitami\Enumy\BestPractice\schema.jpg" />
     <Content Include="VztahyMeziEntitami\Enumy\schema.jpg" />
     <Content Include="VztahyMeziEntitami\KomplexniTypy\schema.jpg" />

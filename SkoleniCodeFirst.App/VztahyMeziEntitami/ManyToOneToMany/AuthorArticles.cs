@@ -17,7 +17,7 @@ namespace SkoleniCodeFirst.VztahyMeziEntitami.ManyToOneToMany
 
         public int Priority { get; set; }
 
-        public Article Article { get; set; }
         public Author Author { get; set; }
+        public Article Article { get; set; }
     }
 }

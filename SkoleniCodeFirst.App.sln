@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24606.1
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_SkoleniCodeFirst", "SkoleniCodeFirst.App\1_SkoleniCodeFirst.csproj", "{9D534CB2-6BD7-4F5E-88BA-7D4942DBE728}"
 EndProject
@@ -10,6 +10,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_Dotazovani", "Dotazovani\3_Dotazovani.csproj", "{FCFA2903-844F-463A-A4C2-8F840C87A8CA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4_Extras", "Extras\4_Extras.csproj", "{91086976-8BCE-4A1F-9737-C961DE7E40B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DOC", "DOC", "{15C9E153-7F00-4835-8590-012C0CD718C5}"
+	ProjectSection(SolutionItems) = preProject
+		Doc\Osnova s priklady.docx = Doc\Osnova s priklady.docx
+		Doc\Prezentace-uvod.pptx = Doc\Prezentace-uvod.pptx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

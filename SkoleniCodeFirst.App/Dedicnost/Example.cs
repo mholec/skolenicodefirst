@@ -6,8 +6,8 @@ namespace SkoleniCodeFirst.Dedicnost
     {
         public void Start()
         {
-            // TablePerHierarchy();
-            TablePerType();
+            TablePerHierarchy();
+            // TablePerType();
             // TablePerClass();
         }
 

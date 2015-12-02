@@ -10,9 +10,9 @@ namespace SkoleniCodeFirst.Dedicnost.TPH
         {
             // přejmenuje sloupec Discriminator na Type
 
-            // modelBuilder.Entity<Article>()
-            //   .Map<OnlineArticle>(x => x.Requires("Type").HasValue(1))
-            //   .Map<OfflineArticle>(x => x.Requires("Type").HasValue(2));
+            //modelBuilder.Entity<Article>()
+            //  .Map<OnlineArticle>(x => x.Requires("Type").HasValue(1))
+            //  .Map<OfflineArticle>(x => x.Requires("Type").HasValue(2));
         }
     }
 }

@@ -17,7 +17,6 @@ namespace SkoleniCodeFirst.VztahyMeziEntitami.OneToMany
 
 
         public Author Author { get; set; }
-
         public Category Category { get; set; }
     }
 }

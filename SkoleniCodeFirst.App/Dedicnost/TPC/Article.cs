@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace SkoleniCodeFirst.Dedicnost.TPC
 {
     public abstract class Article

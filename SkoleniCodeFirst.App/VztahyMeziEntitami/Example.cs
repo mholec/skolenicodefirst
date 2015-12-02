@@ -1,5 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Linq;
+using SkoleniCodeFirst.VztahyMeziEntitami.Enumy;
+using SkoleniCodeFirst.VztahyMeziEntitami.ManyToOneToMany;
 
 namespace SkoleniCodeFirst.VztahyMeziEntitami
 {
@@ -8,13 +10,13 @@ namespace SkoleniCodeFirst.VztahyMeziEntitami
         public void Start()
         {
             // OneToMany();
-             ManyToMany();
+            // ManyToMany();
             // ManyToOneToMany();
             // SelfRelace();
             // OneToOneOrZero();
             // KomplexniTypy();
             // Enumy();
-            // EnumyBestPractice();
+             EnumyBestPractice();
         }
 
         public void OneToMany()
@@ -28,12 +30,12 @@ namespace SkoleniCodeFirst.VztahyMeziEntitami
 
         public void ManyToMany()
         {
-            using (var db = new ManyToMany.MyContext())
+            using (var db = new ManyToMany.FluentApi.MyContext())
             {
                 Database.SetInitializer(new DropCreateDatabaseAlways<ManyToMany.FluentApi.MyContext>());
 
-                var article = new ManyToMany.Article() { Title = "My article" };
-                article.Authors.Add(new ManyToMany.Author() { FirstName = "Miroslav" });
+                var article = new ManyToMany.FluentApi.Article() { Title = "My article" };
+                article.Authors.Add(new ManyToMany.FluentApi.Author() { FirstName = "Miroslav" });
 
                 db.Articles.Add(article);
                 db.SaveChanges();
@@ -46,6 +48,7 @@ namespace SkoleniCodeFirst.VztahyMeziEntitami
             {
                 Database.SetInitializer(new DropCreateDatabaseAlways<ManyToOneToMany.MyContext>());
                 var article = db.Articles.FirstOrDefault();
+                article.AuthorArticles.Add(new AuthorArticles {Author = new Author(), Priority = 1});
             }
         }
 
@@ -79,13 +82,13 @@ namespace SkoleniCodeFirst.VztahyMeziEntitami
             using (var db = new KomplexniTypy.MyContext())
             {
                 Database.SetInitializer(new DropCreateDatabaseAlways<KomplexniTypy.MyContext>());
-                var article = db.Authors.FirstOrDefault();
+                var author = db.Authors.FirstOrDefault();
             }
         }
 
         public void Enumy()
         {
-            using (var db = new Enumy.MyContext())
+            using ( var db = new Enumy.MyContext())
             {
                 Database.SetInitializer(new DropCreateDatabaseAlways<Enumy.MyContext>());
                 var article = new Enumy.Article
@@ -96,6 +99,8 @@ namespace SkoleniCodeFirst.VztahyMeziEntitami
 
                 db.Articles.Add(article);
                 db.SaveChanges();
+
+                var myArticle = db.Articles.FirstOrDefault(x => x.State == State.New);
             }
         }
 
@@ -112,6 +117,8 @@ namespace SkoleniCodeFirst.VztahyMeziEntitami
 
                 db.Articles.Add(article);
                 db.SaveChanges();
+
+                var myArticle = db.Articles.FirstOrDefault(x => x.StateId == VztahyMeziEntitami.Enumy.BestPractice.State.New);
             }
         }
     }
