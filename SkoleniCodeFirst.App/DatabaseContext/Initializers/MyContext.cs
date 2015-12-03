@@ -8,11 +8,12 @@ namespace SkoleniCodeFirst.DatabaseContext.Initializers
 
         public MyContext()
         {
-            // Database.SetInitializer<MyContext>(new CreateDatabaseIfNotExists<MyContext>());
-            Database.SetInitializer<MyContext>(new DropCreateDatabaseIfModelChanges<MyContext>());
+            Database.SetInitializer<MyContext>(new CreateDatabaseIfNotExists<MyContext>());
+            // Database.SetInitializer<MyContext>(new DropCreateDatabaseIfModelChanges<MyContext>());
             // Database.SetInitializer<MyContext>(new DropCreateDatabaseAlways<MyContext>());
-            //Database.SetInitializer<MyContext>(new MyDropIfModelChangesContextInitializer());
-            Database.SetInitializer<MyContext>(new MyCreateIfNotExistsContextInitializer());
+
+            // Database.SetInitializer<MyContext>(new MyDropIfModelChangesContextInitializer());
+            // Database.SetInitializer<MyContext>(new MyCreateIfNotExistsContextInitializer());
             Database.Initialize(true);
         }
 

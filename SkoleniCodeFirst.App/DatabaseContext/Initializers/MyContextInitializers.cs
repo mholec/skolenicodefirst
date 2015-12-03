@@ -7,6 +7,9 @@ namespace SkoleniCodeFirst.DatabaseContext.Initializers
         protected override void Seed(MyContext context)
         {
             // přidání vlastních dat, pokud je splněn initializer
+            context.Articles.Add(new Article { Title = "Init article" });
+            context.SaveChanges();
+
             base.Seed(context);
         }
     }
@@ -21,6 +24,9 @@ namespace SkoleniCodeFirst.DatabaseContext.Initializers
         protected override void Seed(MyContext context)
         {
             // přidání vlastních dat, pokud je splněn initializer
+            context.Articles.Add(new Article {Title = "Init article"});
+            context.SaveChanges();
+
             base.Seed(context);
         }
     }
@@ -30,9 +36,12 @@ namespace SkoleniCodeFirst.DatabaseContext.Initializers
         protected override void Seed(MyContext context)
         {
             // přidání vlastních dat, pokud je splněn initializer
+            context.Articles.Add(new Article { Title = "Init article" });
+            context.SaveChanges();
+
             base.Seed(context);
         }
     }
 
-    //public class MyLatestVersionContentInitializer : MigrateDatabaseToLatestVersion<>
+    // public class MyLatestVersionContentInitializer : MigrateDatabaseToLatestVersion<>
 }

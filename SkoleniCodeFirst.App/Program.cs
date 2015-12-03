@@ -4,7 +4,7 @@
     {
         public static void Main(string[] args)
         {
-            var example = new Dedicnost.Example();
+            var example = new DatabaseContext.Example();
             example.Start();
         }
     }

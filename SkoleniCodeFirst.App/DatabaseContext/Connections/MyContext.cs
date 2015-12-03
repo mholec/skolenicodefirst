@@ -11,6 +11,10 @@ namespace SkoleniCodeFirst.DatabaseContext.Connections
         {
         }
 
+        //public MyContext() : base("MyContext")
+        //{
+        //}
+
         public MyContext(string connectionString = "MyContext") : base(connectionString)
         {
         }

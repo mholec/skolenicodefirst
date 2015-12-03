@@ -1,6 +1,7 @@
 ﻿using System.Data.Common;
 using System.Data.Entity;
 using System.Linq;
+using SkoleniCodeFirst.DatabaseContext.Initializers;
 
 namespace SkoleniCodeFirst.DatabaseContext
 {
@@ -8,7 +9,7 @@ namespace SkoleniCodeFirst.DatabaseContext
     {
         public void Start()
         {
-            // ZakladniMetody();
+            //ZakladniMetody();
             // Connections();
             Initializers();
         }
@@ -45,6 +46,8 @@ namespace SkoleniCodeFirst.DatabaseContext
             using (var db = new Initializers.MyContext())
             {
                 var articles = db.Articles.Select(x => x).FirstOrDefault();
+                db.Articles.Add(new Article() {Title = "Clanek"});
+                db.SaveChanges();
             }
         }
     }
