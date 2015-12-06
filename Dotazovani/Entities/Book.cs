@@ -14,7 +14,7 @@ namespace Dotazovani.Entities
         // properties
         public string Title { get; set; }
         public DateTime Added { get; set; }
-        
+
         
         // navigation properties
         public virtual Category Category { get; set; }

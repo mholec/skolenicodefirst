@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using Dotazovani.Entities;
 
 namespace Dotazovani.Priklady
@@ -20,6 +21,11 @@ namespace Dotazovani.Priklady
             // načtení dat a následné uložení
             Book book = context.Books.Find(2);
             book.Title = "O pejskovi a kočičce";
+            context.SaveChanges();
+
+            // ignorováno
+            book = new Book { BookId = 2 };
+            book.Title = "Nový titulek";
             context.SaveChanges();
 
             // aktualizace na závislé property není problém

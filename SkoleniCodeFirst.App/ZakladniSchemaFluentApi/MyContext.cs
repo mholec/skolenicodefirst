@@ -13,8 +13,8 @@ namespace SkoleniCodeFirst.ZakladniSchemaFluentApi
             // model builder API
             modelBuilder.Entity<Article>().HasKey(x => x.ArticleId);
             modelBuilder.Entity<Article>().Property(x => x.Title).HasMaxLength(100);
-            modelBuilder.Entity<Article>().Property(x => x.RowVersion).IsRowVersion();
             modelBuilder.Entity<Article>().Ignore(x => x.InternalTitle);
+            modelBuilder.Entity<Article>().Property(x => x.RowVersion).IsRowVersion();
 
             modelBuilder.Entity<Event>().HasKey(x => new {x.Name, x.PlaceId, x.Date});
 

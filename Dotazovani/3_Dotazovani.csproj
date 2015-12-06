@@ -77,7 +77,9 @@
     <Compile Include="Priklady\EntityStateExamples.cs" />
     <Compile Include="Priklady\QuerySyntaxExamples.cs" />
     <Compile Include="Priklady\MethodSyntaxExamples.cs" />
+    <Compile Include="Priklady\SerializableExamples.cs" />
     <Compile Include="Priklady\TransactionExamples.cs" />
+    <Compile Include="Priklady\Validace\Article.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -16,7 +16,8 @@ namespace Dotazovani
             {
                 db.Database.Initialize(false);
 
-                var examples = new ModificationExamples(db);
+                //var examples = new ModificationExamples(db);
+                var examples = new SerializableExamples();
                 examples.Start();
             }
 

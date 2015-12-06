@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
 using Dotazovani.Entities;
 
@@ -28,7 +27,7 @@ namespace Dotazovani.Priklady
             EBook book2 = new EBook {BookId = 42, Title = "Tipy a triky pro iPhone 6", Added = DateTime.Now, CategoryId = 1};
             context.Entry(book2).State = EntityState.Modified; // !!! neprovede se změna typu, EF bug
             context.SaveChanges();
-
+            
             // asnotracking
             Book book3 = context.Books.OrderByDescending(x => x.BookId).FirstOrDefault();
             Book book4 = context.Books.AsNoTracking().OrderBy(x => x.BookId).FirstOrDefault();
