@@ -19,7 +19,7 @@ namespace Dotazovani.Priklady
             // https://www.miroslavholec.cz/blog/odstranovani-dat-v-entity-framework-bez-preloadu
 
             // direct delete (by ID)
-            Book book1 = new Book { BookId = 40 };
+            Book book1 = new Book { BookId = 46 };
             context.Entry(book1).State = EntityState.Deleted;
             context.SaveChanges();
 
@@ -29,6 +29,8 @@ namespace Dotazovani.Priklady
             context.SaveChanges();
             
             // asnotracking
+            var all1 = context.Books.ToList();
+            var all2 = context.Books.AsNoTracking().ToList();
             Book book3 = context.Books.OrderByDescending(x => x.BookId).FirstOrDefault();
             Book book4 = context.Books.AsNoTracking().OrderBy(x => x.BookId).FirstOrDefault();
             book3.Title = "Chci změnit titulek";

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Dotazovani.Entities
 {
@@ -15,7 +16,10 @@ namespace Dotazovani.Entities
         public string Title { get; set; }
         public DateTime Added { get; set; }
 
-        
+        //[Timestamp]
+        //public byte[] RowVersion { get; set; }
+
+
         // navigation properties
         public Category Category { get; set; }
         public virtual ICollection<ParameterValue> ParameterValues { get; set; }

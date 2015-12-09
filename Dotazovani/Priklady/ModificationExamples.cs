@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Linq;
 using Dotazovani.Entities;
 
 namespace Dotazovani.Priklady
@@ -29,13 +30,14 @@ namespace Dotazovani.Priklady
             context.SaveChanges();
 
             // aktualizace na závislé property není problém
-            var bookWithCategory = context.Books.Find(2);
+            var bookWithCategory = context.Books.Include(x => x.Category).FirstOrDefault(x => x.BookId == 2);
             bookWithCategory.Category.Name = "Psychologická kniha";
             context.SaveChanges();
 
             /*************************************** CREATE */
 
             // přidání záznamu
+            book = new Book() {Added = DateTime.Now, CategoryId = 1, Title = "New book" };
             context.Books.Add(book);
             context.SaveChanges();
 
