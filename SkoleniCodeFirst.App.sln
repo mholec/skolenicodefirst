@@ -26,6 +26,15 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{27A24E8F-8E08-43DA-9CC9-E430AC3E2744}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{1E7341FE-63B6-4CFD-A86E-5EA2A6A58147}"
+	ProjectSection(SolutionItems) = preProject
+		Db\codefirst_app.bacpac = Db\codefirst_app.bacpac
+		Db\codefirst_app.sql = Db\codefirst_app.sql
+		Db\codefirstdb.bacpac = Db\codefirstdb.bacpac
+		Db\codefirstdb.sql = Db\codefirstdb.sql
+		Db\codefirstextras.sql = Db\codefirstextras.sql
+		Db\codefirstsp.bacpac = Db\codefirstsp.bacpac
+		Db\codefirstsp.sql = Db\codefirstsp.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

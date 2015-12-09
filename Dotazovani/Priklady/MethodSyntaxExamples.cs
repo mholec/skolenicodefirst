@@ -59,6 +59,10 @@ namespace Dotazovani.Priklady
             // řazení záznamů
             List<Book> example4 = context.Books.OrderByDescending(x => x.Added).ThenBy(x => x.Title).ToList();
 
+            /*************************************** CONTAINS */
+            var categoryIds = example4.Select(x => x.CategoryId).ToArray();
+            var allcategories = context.Categories.Where(x => categoryIds.Contains(x.CategoryId)).ToList();
+
             /*************************************** SELECT */
 
             // select vybraných sloupců (do entit / anonymních typů)

@@ -17,7 +17,7 @@ namespace Dotazovani.Entities
 
         
         // navigation properties
-        public virtual Category Category { get; set; }
+        public Category Category { get; set; }
         public virtual ICollection<ParameterValue> ParameterValues { get; set; }
     }
 }
