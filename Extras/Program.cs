@@ -1,12 +1,10 @@
-﻿using HibernatingRhinos.Profiler.Appender.EntityFramework;
-
-namespace Extras
+﻿namespace Extras
 {
     public static class Program
     {
         public static void Main(string[] args)
         {
-            EntityFrameworkProfiler.Initialize();
+            EntityFrameworkProfilerBootstrapper.PreStart();
 
             var example = new Views.Examples();
             example.Start();

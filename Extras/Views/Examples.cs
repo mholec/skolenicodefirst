@@ -14,7 +14,6 @@ namespace Extras.Views
                 Article article = articleFromView.FirstOrDefault();
                 article.Title = "Chci změnit titulek";
 
-                // !! dotaz se odesle ale zmena nemuze nad view probehnout
                 db.SaveChanges();
             }
         }

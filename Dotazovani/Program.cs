@@ -8,9 +8,7 @@ namespace Dotazovani
     {
         public static void Main(string[] args)
         {
-            // profilovací nástroj
-            // http://www.hibernatingrhinos.com/products/efprof
-            EntityFrameworkProfiler.Initialize();
+            EntityFrameworkProfilerBootstrapper.PreStart();
 
             using (var db = new BookStoreContext())
             {
@@ -24,3 +22,4 @@ namespace Dotazovani
         }
     }
 }
+
