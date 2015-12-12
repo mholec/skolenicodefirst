@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using StackExchange.Profiling;
 using WebApp.Example;
 
 namespace WebApp.Controllers

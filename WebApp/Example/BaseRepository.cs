@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace WebApp.Example
 {
@@ -27,6 +28,16 @@ namespace WebApp.Example
         public IQueryable<T> GetAll()
         {
             return Set;
+        }
+
+        public void Save()
+        {
+            Context.SaveChanges();
+        }
+
+        public async Task SaveAsync()
+        {
+            await Context.SaveChangesAsync();
         }
     }
 }

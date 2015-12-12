@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Threading.Tasks;
 
 namespace WebApp.Example
 {
@@ -7,5 +8,7 @@ namespace WebApp.Example
         T AddNew(T entity);
         T Delete(T entity);
         IQueryable<T> GetAll();
+        void Save();
+        Task SaveAsync();
     }
 }

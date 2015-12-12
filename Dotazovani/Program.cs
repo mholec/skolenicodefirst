@@ -1,6 +1,4 @@
-﻿using System.Data.Entity;
-using Dotazovani.Priklady;
-using HibernatingRhinos.Profiler.Appender.EntityFramework;
+﻿using Dotazovani.Priklady;
 
 namespace Dotazovani
 {
@@ -8,17 +6,17 @@ namespace Dotazovani
     {
         public static void Main(string[] args)
         {
+            // ef profiler
             EntityFrameworkProfilerBootstrapper.PreStart();
 
             using (var db = new BookStoreContext())
             {
                 db.Database.Initialize(false);
 
-                var examples = new EntityStateExamples(db);
+                var examples = new PredicateBuilderExamples(db);
                 //var examples = new SerializableExamples();
                 examples.Start();
             }
-
         }
     }
 }

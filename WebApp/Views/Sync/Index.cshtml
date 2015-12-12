@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<div>
+    <h1>A1</h1>
+    @foreach (var article in Model.A1)
+    {
+        <div>@article.Title</div>
+    }
+
+    <h1>A2</h1>
+    @foreach (var article in Model.A2)
+    {
+        <div>@article.Title</div>
+    }
+
+    <h1>A3</h1>
+    @foreach (var article in Model.A3)
+    {
+        <div>@article.Title</div>
+    }
+</div>
+</body>
+</html>
