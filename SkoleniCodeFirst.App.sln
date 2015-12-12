@@ -20,6 +20,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DOC", "DOC", "{15C9E153-7F0
 		Doc\Prezentace-dotazovani.pptx = Doc\Prezentace-dotazovani.pptx
 		Doc\Prezentace-extras.pptx = Doc\Prezentace-extras.pptx
 		Doc\Prezentace-modelovani.pptx = Doc\Prezentace-modelovani.pptx
+		Doc\Prezentace-optimalizace.pptx = Doc\Prezentace-optimalizace.pptx
 		Doc\Prezentace-uvod.pptx = Doc\Prezentace-uvod.pptx
 	EndProjectSection
 EndProject
