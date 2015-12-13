@@ -90,6 +90,8 @@
     <Compile Include="Priklady\SerializableExamples.cs" />
     <Compile Include="Priklady\TransactionExamples.cs" />
     <Compile Include="Priklady\Validace\Article.cs" />
+    <Compile Include="Priklady\Validace\EmailAttribute.cs" />
+    <Compile Include="Priklady\Validace\ValidationExamples.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

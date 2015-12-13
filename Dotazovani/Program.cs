@@ -1,4 +1,5 @@
 ﻿using Dotazovani.Priklady;
+using Dotazovani.Priklady.Validace;
 
 namespace Dotazovani
 {
@@ -13,7 +14,7 @@ namespace Dotazovani
             {
                 db.Database.Initialize(false);
 
-                var examples = new PredicateBuilderExamples(db);
+                var examples = new MethodSyntaxExamples(db);
                 //var examples = new SerializableExamples();
                 examples.Start();
             }

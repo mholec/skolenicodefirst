@@ -5,8 +5,12 @@ namespace Dotazovani.Priklady.Validace
 {
     public class Article : IValidatableObject
     {
+        [Required]
         public string Title { get; set; }
         public string Description { get; set; }
+
+        [Email]
+        public string AuthorEmail { get; set; }
         
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)

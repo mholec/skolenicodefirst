@@ -9,8 +9,8 @@ namespace SkoleniCodeFirst.DatabaseContext
     {
         public void Start()
         {
-            //ZakladniMetody();
-            // Connections();
+            // ZakladniMetody();
+            Connections();
             Initializers();
         }
 

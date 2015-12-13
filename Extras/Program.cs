@@ -6,7 +6,7 @@
         {
             EntityFrameworkProfilerBootstrapper.PreStart();
 
-            var example = new Views.Examples();
+            var example = new Adonet.Examples();
             example.Start();
         }
     }

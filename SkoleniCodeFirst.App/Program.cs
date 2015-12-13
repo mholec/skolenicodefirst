@@ -4,7 +4,7 @@
     {
         public static void Main(string[] args)
         {
-            var example = new DatabaseContext.Example();
+            var example = new ZakladniSchema.Example();
             example.Start();
         }
     }
